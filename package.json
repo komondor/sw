@@ -1,0 +1,45 @@
+{
+  "name": "sw",
+  "version": "0.0.42",
+  "description": "cd to folder with full or patial name",
+  "main": "dist/app/index.js",
+  "scripts": {
+    "test": "mocha --compilers js:babel/register"
+  },
+  "bin": {
+    "sw": "./dist/bin/app.js"
+  },
+  "keywords": [
+    "utility",
+    "cmd",
+    "cd",
+    "windows"
+  ],
+  "dependencies": {
+    "inquirer": "^0.8.3",
+    "q": "^1.4.0",
+    "robotjs": "^0.3.7",
+    "shelljs": "^0.3.0",
+    "underscore": "^1.8.3",
+    "yargs": "^3.8.0"
+  },
+  "devDependencies": {
+    "babel": "^5.4.3",
+    "chai": "^2.1.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^5.1.0",
+    "mocha": "^2.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/komondor/sw"
+  },
+  "author": {
+    "name": "komondor",
+    "email": "komondor.mtl@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/komondor/sw/issues"
+  },
+  "homepage": "https://github.com/komondor/sw"
+}
