@@ -26,6 +26,7 @@
   "devDependencies": {
     "babel": "^5.4.3",
     "chai": "^2.1.1",
+    "eslint": "^3.1.1",
     "gulp": "^3.9.1",
     "gulp-babel": "^5.1.0",
     "mocha": "^2.2.1"

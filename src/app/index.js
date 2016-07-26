@@ -70,7 +70,23 @@ SW.prototype.questionuser = function (choices) {
 SW.prototype.iteration =  function (list,url)  {
 	var self = this;
 	var thatDeffered = Q.defer();
-	var sequenceKeyword = Q().then(()=>{return [['./'],list]});
+	var starting_path = ['./'];
+
+
+	if(list[0]=== ':') {
+
+		list = list.slice(1);
+		starting_path = [process.env.HOME+'/'];
+
+		if(list.length === 0) {
+			thatDeffered.resolve([starting_path])
+		}
+
+	}
+
+	var sequenceKeyword = Q().then(()=>{
+			return [starting_path,list]
+	});
 
 	for(let i=0;i<list.length;i++){
 		let resultat = [];
