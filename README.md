@@ -51,4 +51,4 @@ if there are 2 or more matches, it will prompt to choose the location
 
 if you don't start the command with":", it will start from './'
 
-<img src="media/example.gif" width="460">
+<img src="media/example.gif" width="1000">

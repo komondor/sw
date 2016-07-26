@@ -1,6 +1,6 @@
 {
   "name": "sw",
-  "version": "0.0.42",
+  "version": "0.0.43",
   "description": "cd to folder with full or patial name",
   "main": "dist/app/index.js",
   "scripts": {
