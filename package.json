@@ -1,6 +1,6 @@
 {
   "name": "sw",
-  "version": "0.0.45",
+  "version": "0.0.46",
   "description": "cd with shortcuts",
   "main": "dist/app/index.js",
   "scripts": {
@@ -13,7 +13,8 @@
     "utility",
     "cmd",
     "cd",
-    "windows"
+    "windows",
+    "productivity"
   ],
   "dependencies": {
     "inquirer": "^0.8.3",
