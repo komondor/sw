@@ -19,36 +19,32 @@ npm install sw -g
 $ sw folder [[subf1][subf2][...]]      
 ```
 
-to point to the home directory, use ":"
-
-```bash
-$ sw : desktop
-```
-
-to point to the parent directory, use ".." :
-
-```bash
-$ sw .. .. .. whatever (same as cd ../../../whatever)
-```
-
+- to point to the home directory, use ":"
+- to point to the parent directory, use ".."
 
 #### example:
 
-to point to folder location: '~/desktop/folder1/folder2' :
+- to point to folder location: '~/desktop/folder1/folder2' :
 
 ```bash
-$ sw :  desk r1 r2
+$ sw : desk r1 r2
 ```
 
-if there is only one match, then it will perform:
+- if there is only one match, then it will perform:
 
 ```bash
 $ cd ~/desktop/folder1/folder2
 ```
 
-if there are 2 or more matches, it will prompt to choose the location
+- if there are 2 or more matches, it will prompt to choose the location
 
+```bash
+? Which folder would like to work with? (Use arrow keys)
+❯ ./desktop/folder1/folder2
+  ./desktop/folder12/folder2
+  ./desktop/folder123/folder1
+```
 
-if you don't start the command with":", it will start from './'
+#### demo:
 
 <img src="media/example.gif" width="1000">
