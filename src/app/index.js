@@ -71,12 +71,13 @@ SW.prototype.iteration =  function (list,url)  {
 	var self = this;
 	var thatDeffered = Q.defer();
 	var starting_path = ['./'];
-
+	let home_directory = getUserHome()
+	console.log(home_directory);
 
 	if(list[0]=== ':') {
 
 		list = list.slice(1);
-		starting_path = [process.env.HOME+'/'];
+		starting_path = [home_directory + '/'];
 
 		if(list.length === 0) {
 			thatDeffered.resolve([starting_path])
@@ -134,4 +135,8 @@ SW.prototype.iteration =  function (list,url)  {
 		.catch((err)=>{thatDeffered.reject(err)})
 		.done();
 	return thatDeffered.promise;
+}
+
+function getUserHome() {
+  return process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME'];
 }
