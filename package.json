@@ -4,8 +4,7 @@
   "description": "cd with shortcuts",
   "main": "dist/app/index.js",
   "scripts": {
-    "test": "mocha --compilers js:babel/register",
-    "bin_test": "./dist/bin/app.js :"
+    "test": "mocha --compilers js:babel/register"
   },
   "bin": {
     "sw": "./dist/bin/app.js"

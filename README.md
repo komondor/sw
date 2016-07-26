@@ -64,5 +64,5 @@ characters | description
 match(es) | return
 ---------- | ------------
 `0`        | `no match`
-`1`       | `to(target) directory`
+`1`       | `target directory`
 `2 or more` | `Which folder would like to work command with? (Use arrow keys)`

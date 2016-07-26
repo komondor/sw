@@ -66,7 +66,7 @@ SW.prototype.questionuser = function (choices) {
 	return thatDeffered.promise;
 }
 
-// iteration process
+// iteration
 SW.prototype.iteration =  function (list,url)  {
 	var self = this;
 	var thatDeffered = Q.defer();
