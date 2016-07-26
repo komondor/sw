@@ -1,6 +1,6 @@
 {
   "name": "sw",
-  "version": "0.0.44",
+  "version": "0.0.45",
   "description": "cd with shortcuts",
   "main": "dist/app/index.js",
   "scripts": {
