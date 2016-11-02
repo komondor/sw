@@ -12,7 +12,7 @@
 
 #### Description:
 
-Terminal command to change directory. Example: `sw fo sub` would search for a directory
+Terminal command to change directory(relative path only). Example: `sw fo sub` would search for a directory
 that matches this regular expression:`/.*fo.*\/.*sub.*/g`. Therefore, it would match `./folder/subfolder`
 but not `folder/whatever`.  If it matches only one directory, it will perform `cd ./to/this/directory`.
 If it matches two or more directories, it will prompt you to choose one. There are two special characters:
