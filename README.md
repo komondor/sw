@@ -5,16 +5,60 @@
 
 
 
-#### Installation:
+#### install:
 
 - this module requires [node-gyp](https://github.com/nodejs/node-gyp)
 - then, `npm install sw -g`
 
-#### Description:
+#### description:
 
-Terminal command to change directory(relative path only). Example: `sw fo sub` would search for a directory
-that matches this regular expression:`/.*fo.*\/.*sub.*/g`. Therefore, it would match `./folder/subfolder`
-but not `folder/whatever`.  If it matches only one directory, it will perform `cd ./to/this/directory`.
-If it matches two or more directories, it will prompt you to choose one. There are two special characters:
-`:` to target the home directory(only as first argument) and `..` to target the parent directory.
-So `sw : ..` is equivalent to `cd ~/..`. Another example: `sw rr n nt do e` would match `./array/boolean/current/do/es6`
+`cd` command with shorcuts(change directory)
+
+
+#### example
+
+`sw fo sub`  searches for a directory that matches this regular     	expression: `/.*fo.*\/.*sub.*/g`. Therefore, it would match`./folder/subfolder` but not `folder/whatever`
+
+- If it matches only one directory, it will perform `cd ./to/this/directory`
+- If it matches two or more directories, it will prompt you to make a choice
+
+
+#### special characters
+
+There are 4 special characters
+
+###### absolute path ("/")
+
+```bash
+
+#  special only as first argument
+#  that would match with /usr/local/share
+
+sw / u loc sh
+```
+
+###### relative to home directory ( "~" or ":")
+
+```bash
+
+# special only as first argument
+# that would match ~/Desktop/afolderwithalongname
+
+sw ~ Desk gnam
+
+# or with ":" , same result
+
+sw : sk rwi
+
+```
+
+###### parent folder( "..")
+
+```bash
+
+# from /usr/local/share/zsh
+# that would match  /usr/local/include
+
+sw .. .. ncl
+
+```
