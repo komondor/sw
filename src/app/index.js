@@ -72,7 +72,10 @@ SW.prototype.iteration =  function (list,url)  {
 	let home_directory = getUserHome()
 	console.log(home_directory)
 
-	if(list[0]=== ':') {
+	// If first argument is "~"
+	// it will search relative to the home directory
+
+	if(list[0]=== home_directory || list[0]=== ':'  ) {
 
 		list = list.slice(1)
 		starting_path = [home_directory + '/']
@@ -82,6 +85,22 @@ SW.prototype.iteration =  function (list,url)  {
 		}
 
 	}
+
+	// If first argument is "/"
+	// it will set search for an absolute path
+
+
+	if(list[0]=== '/') {
+
+		list = list.slice(1)
+		starting_path = ['/']
+
+		if(list.length === 0) {
+			thatDeffered.resolve([starting_path])
+		}
+
+	}
+
 
 	var sequenceKeyword = Q().then(()=>{
 		return [starting_path,list]
