@@ -2,8 +2,6 @@
 
 'use strict';
 
-var shelljs = require('shelljs');
-var args = require('yargs').argv;
 var SW = require('../app/index.js');
 var robot = require('robotjs');
 

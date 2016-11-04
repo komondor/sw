@@ -3,9 +3,7 @@
 var Q = require('q');
 var fs = require('fs');
 var _ = require('underscore');
-var shelljs = require('shelljs');
 var inquirer = require("inquirer");
-var args = require('yargs').argv;
 
 //export
 module.exports = SW;
@@ -65,7 +63,7 @@ SW.prototype.questionuser = function (choices) {
 	return thatDeffered.promise;
 };
 
-// iteration process
+// iteration
 SW.prototype.iteration = function (list, url) {
 	var self = this;
 	var thatDeffered = Q.defer();
@@ -87,7 +85,7 @@ SW.prototype.iteration = function (list, url) {
 		return [starting_path, list];
 	});
 
-	var _loop = function (i) {
+	var _loop = function _loop(i) {
 		var resultat = [];
 		sequenceKeyword = sequenceKeyword.then(function (data) {
 			var keywordDeffered = Q.defer();
@@ -95,7 +93,7 @@ SW.prototype.iteration = function (list, url) {
 				return [data[0][0], list[i]];
 			});
 
-			var _loop2 = function (j) {
+			var _loop2 = function _loop2(j) {
 				sequenceFolder = sequenceFolder.then(self.readfolder.bind(self)).then(function (datafrom) {
 					var folderDiffered = Q.defer();
 					if (j !== data[0].length - 1) {
@@ -125,7 +123,7 @@ SW.prototype.iteration = function (list, url) {
 			for (var j = 0; j < data[0].length; j++) {
 				_loop2(j);
 			}
-			sequenceFolder['catch'](function (err) {
+			sequenceFolder.catch(function (err) {
 				thatDeffered.reject(err);
 			}).done();
 			return keywordDeffered.promise;
@@ -135,7 +133,7 @@ SW.prototype.iteration = function (list, url) {
 	for (var i = 0; i < list.length; i++) {
 		_loop(i);
 	}
-	sequenceKeyword['catch'](function (err) {
+	sequenceKeyword.catch(function (err) {
 		thatDeffered.reject(err);
 	}).done();
 	return thatDeffered.promise;

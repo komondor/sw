@@ -3,8 +3,6 @@
 
 'use strict';
 
-var shelljs = require('shelljs');
-var args = require('yargs').argv;
 var SW = require('../app/index.js');
 var robot = require('robotjs');
 
@@ -34,7 +32,7 @@ if (process.argv[2]) {
 			robot.typeString('cd "' + result[0] + '"');
 			robot.keyTap('enter');
 		}
-	})['catch'](error).done();
+	}).catch(error).done();
 }
 // if no argument provided
 else {

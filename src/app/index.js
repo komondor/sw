@@ -3,9 +3,8 @@
 var Q = require('q');
 var fs = require('fs');
 var _ = require('underscore');
-var shelljs = require('shelljs');
 var inquirer = require("inquirer");
-var args = require('yargs').argv;
+
 
 
 //export
