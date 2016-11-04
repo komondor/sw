@@ -1,9 +1,9 @@
 {
   "name": "sw",
-  "version": "0.0.52",
+  "version": "0.0.53",
   "author": "komondor",
   "repository": "komondor/sw",
-  "description": "cd with shortcuts(relative path only)",
+  "description": "cd with shortcuts",
   "main": "dist/app/index.js",
   "scripts": {
     "build": "./node_modules/babel-cli/bin/babel.js src -d dist",

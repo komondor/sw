@@ -46,7 +46,7 @@ sw / u loc sh
 
 sw ~ Desk gnam
 
-# or with ":" , same result
+# or with ":" 
 
 sw : sk rwi
 
