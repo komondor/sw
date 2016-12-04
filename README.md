@@ -20,7 +20,7 @@
 `sw fo sub`  searches for a directory that matches this regular     	expression: `/.*fo.*\/.*sub.*/g`. Therefore, it would match`./folder/subfolder` but not `folder/whatever`
 
 - If it matches only one directory, it will perform `cd ./to/this/directory`
-- If it matches two or more directories, it will prompt you to make a choice
+- If it matches two or more directories, it will prompt you to choose a folder
 
 
 #### special characters
@@ -46,7 +46,7 @@ sw / u loc sh
 
 sw ~ Desk gnam
 
-# or with ":" 
+# or with ":"
 
 sw : sk rwi
 

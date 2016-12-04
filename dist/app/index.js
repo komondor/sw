@@ -53,7 +53,7 @@ SW.prototype.questionuser = function (choices) {
 	var questionfolder = [{
 		type: "list",
 		name: "folderChoice",
-		message: "Which folder would like to work with?",
+		message: "Which folder?",
 		choices: choices
 	}];
 
